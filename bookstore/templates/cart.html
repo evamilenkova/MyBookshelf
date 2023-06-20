@@ -52,7 +52,7 @@
 
             </div>
             <div>
-
+                {% if total != 0 %}
                 <div class="text-end">
                     <h3 class="m-3 fw-bold" style="color: #00563FFF">Total: ${{ total }}</h3>
                     <a href="/deliveryinfo">
@@ -61,6 +61,8 @@
                         </button>
                     </a>
                 </div>
+
+        {% endif %}
             </div>
 
         </div>

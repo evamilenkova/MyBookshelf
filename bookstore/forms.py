@@ -29,7 +29,8 @@ class DeliveryInfoForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         for field in self.visible_fields():
             field.field.widget.attrs["class"] = "form-control"
-
+        for field_name, field in self.fields.items():
+            field.initial = ''
 
 class CustomerRegistrationForm(forms.ModelForm):
     class Meta:
